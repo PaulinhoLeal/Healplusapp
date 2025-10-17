@@ -110,6 +110,9 @@ class AnamneseFormActivity : AppCompatActivity() {
             lp.weight = wn
             v(R.id.leito_bar_necrose).layoutParams = lp
         }
+
+        // Força re-layout do container da barra
+        findViewById<android.view.View>(R.id.leito_bar_container)?.requestLayout()
     }
 
     private fun fillFormFromModel(a: Anamnese) {

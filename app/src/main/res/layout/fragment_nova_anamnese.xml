@@ -146,6 +146,18 @@
                 android:background="#2C3E50" />
         </LinearLayout>
 
+        <!-- Legenda -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableStart="@drawable/dot_red" android:drawablePadding="6dp" android:text="Granulação" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:drawableStart="@drawable/dot_pink" android:drawablePadding="6dp" android:text="Epitelização" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:drawableStart="@drawable/dot_yellow" android:drawablePadding="6dp" android:text="Esfacelo" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:drawableStart="@drawable/dot_bluegray" android:drawablePadding="6dp" android:text="Necrose" />
+        </LinearLayout>
+
         <EditText android:id="@+id/et_granulacao_percent" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Granulação (%)" android:inputType="number" android:text="20" />
         <EditText android:id="@+id/et_epitelizacao_percent" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Epitelização (%)" android:inputType="number" android:text="20" />
         <EditText android:id="@+id/et_esfacelo_percent" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Esfacelo (%)" android:inputType="number" android:text="20" />
