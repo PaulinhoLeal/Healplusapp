@@ -28,10 +28,16 @@ class UserSettings(private val context: Context) {
     }
 
     fun applyToActivity(activity: android.app.Activity) {
+        // Atenção: aplicarOverrideConfiguration depois que resources já foi acessado causa crash.
+        // Aqui aplicamos apenas o Dark Mode. Idioma e fonte devem ser aplicados cedo na Activity (antes de setContentView).
+        applyDarkMode(prefs.getBoolean(KEY_DARK_MODE, false))
+    }
+
+    // Chamar o mais cedo possível em Activity.onCreate, ANTES de setContentView
+    fun applyEarlyInActivity(activity: android.app.Activity) {
         applyDarkMode(prefs.getBoolean(KEY_DARK_MODE, false))
         applyFontScale(activity, prefs.getFloat(KEY_FONT_SCALE, 1.0f))
         applyLanguage(activity, prefs.getString(KEY_LANGUAGE, Locale.getDefault().toLanguageTag()) ?: "pt-BR")
-        // Alto contraste será aplicado via tema custom em telas específicas no futuro
     }
 
     private fun applyDarkMode(enabled: Boolean) {
@@ -60,7 +66,7 @@ class UserSettings(private val context: Context) {
             config.setLocale(locale)
         }
 
-        // CORREÇÃO: Usa o método moderno para aplicar a configuração na atividade
+        // Usa o método moderno para aplicar a configuração na atividade
         activity.applyOverrideConfiguration(config)
     }
 

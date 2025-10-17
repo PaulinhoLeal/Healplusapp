@@ -28,9 +28,8 @@ class PerfilFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        // Placeholder: ao abrir, aplica preferências salvas
         val settings = UserSettings(requireContext())
-        settings.applyToActivity(requireActivity())
+        // Removido applyOverrideConfiguration tardio para evitar crash; aplicação antecipada ocorre na MainActivity
         Snackbar.make(view, getString(R.string.menu_perfil), Snackbar.LENGTH_SHORT).show()
 
         val switchDark = view.findViewById<Switch>(R.id.switch_dark_mode)
@@ -58,7 +57,10 @@ class PerfilFragment : Fragment() {
             settings.setHighContrastEnabled(switchContrast.isChecked)
             settings.setFontScale(scale)
             settings.setLanguage(spinnerLang.selectedItem as String)
+            // Aplica imediatamente apenas o Dark Mode; idioma/escala serão aplicados no próximo recreate()
             settings.applyToActivity(requireActivity())
+            // Força recriar a Activity para aplicar idioma/escala sem risco
+            requireActivity().recreate()
             Snackbar.make(view, "Preferências salvas", Snackbar.LENGTH_SHORT).show()
         }
     }
