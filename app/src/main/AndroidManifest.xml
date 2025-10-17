@@ -12,13 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Healplusapp"
         android:enableOnBackInvokedCallback="true"
-        tools:ignore="MissingApplicationIcon"> <!-- Adicionado para acessibilidade -->
+        tools:ignore="MissingApplicationIcon">
 
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
             <!-- A linha 'android:theme' foi removida por ser redundante -->
             <intent-filter>
@@ -30,7 +29,6 @@
         <activity
             android:name=".features.anamnese.AnamnesePreviewActivity"
             android:exported="false"
-            android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
     </application>
 
