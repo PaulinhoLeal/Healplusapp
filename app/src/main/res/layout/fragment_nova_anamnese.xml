@@ -106,10 +106,50 @@
         <!-- Avaliação do Leito da Ferida -->
         <TextView android:id="@+id/tv_header_leito" style="@style/Heal.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Avaliação do Leito da Ferida" />
 
-        <EditText android:id="@+id/et_granulacao_percent" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Granulação (%)" android:inputType="number" android:text="90" />
-        <EditText android:id="@+id/et_epitelizacao_percent" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Epitelização (%)" android:inputType="number" android:text="0" />
-        <EditText android:id="@+id/et_esfacelo_percent" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Esfacelo (%)" android:inputType="number" android:text="10" />
-        <EditText android:id="@+id/et_necrose_seca_percent" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Necrose Seca (%)" android:inputType="number" android:text="0" />
+        <!-- Barra segmentada: Granulação, Epitelização, Esfacelo, Necrose -->
+        <LinearLayout
+            android:id="@+id/leito_bar_container"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@drawable/bg_bar_container"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:padding="2dp"
+            android:layout_marginBottom="8dp">
+
+            <View
+                android:id="@+id/leito_bar_granulacao"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="#E74C3C" />
+
+            <View
+                android:id="@+id/leito_bar_epitelizacao"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="#F5B7B1" />
+
+            <View
+                android:id="@+id/leito_bar_esfacelo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="#F1C40F" />
+
+            <View
+                android:id="@+id/leito_bar_necrose"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="#2C3E50" />
+        </LinearLayout>
+
+        <EditText android:id="@+id/et_granulacao_percent" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Granulação (%)" android:inputType="number" android:text="20" />
+        <EditText android:id="@+id/et_epitelizacao_percent" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Epitelização (%)" android:inputType="number" android:text="20" />
+        <EditText android:id="@+id/et_esfacelo_percent" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Esfacelo (%)" android:inputType="number" android:text="20" />
+        <EditText android:id="@+id/et_necrose_seca_percent" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Necrose Seca (%)" android:inputType="number" android:text="20" />
 
         <!-- I - Infecção e Inflamação -->
         <TextView android:id="@+id/tv_header_infeccao" style="@style/Heal.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I - Infecção e Inflamação" />

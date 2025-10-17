@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btn_nova_anamnese"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nova Anamnese"
+        style="@style/Heal.Button" />
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nenhum registro"
+        android:gravity="center"
+        android:padding="24dp"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lv_anamneses"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
+
+

@@ -27,6 +27,14 @@
         </activity>
 
         <activity
+            android:name=".features.anamnese.ui.AnamneseListActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".features.anamnese.ui.AnamneseFormActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".features.anamnese.AnamnesePreviewActivity"
             android:exported="false"
             tools:ignore="LockedOrientationActivity" />
