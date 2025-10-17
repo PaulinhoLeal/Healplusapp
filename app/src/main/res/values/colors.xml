@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Light scheme approximating the provided Tailwind HSL tokens -->
+    <color name="heal_background">#EEF5FF</color> <!-- hsl(220 93% 95%) -->
+    <color name="heal_foreground">#0B0F1A</color> <!-- hsl(222 84% 4.9%) -->
+
+    <color name="heal_card">#FFFFFF</color>
+    <color name="heal_card_foreground">#0B0F1A</color>
+
+    <color name="heal_primary">#3B82F6</color> <!-- hsl(217 91% 60%) ~ tailwind blue-500 -->
+    <color name="heal_on_primary">#F8FAFF</color>
+
+    <color name="heal_secondary">#F1F5F9</color> <!-- hsl(210 40% 96.1%) -->
+    <color name="heal_on_secondary">#1F2937</color> <!-- hsl(222 47% 11.2%) -->
+
+    <color name="heal_muted">#F1F5F9</color>
+    <color name="heal_on_muted">#8A99B2</color> <!-- hsl(215 20% 65.1%) -->
+
+    <color name="heal_accent">#F1F5F9</color>
+    <color name="heal_on_accent">#1F2937</color>
+
+    <color name="heal_destructive">#EF4444</color>
+    <color name="heal_on_destructive">#FFFFFF</color>
+
+    <color name="heal_border">#E5EAF3</color> <!-- hsl(214 32% 91.4%) -->
+    <color name="heal_input">#E5EAF3</color>
+    <color name="heal_ring">#3B82F6</color>
 </resources>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Dados Pessoais -->
+        <TextView android:id="@+id/tv_header_dados" style="@style/Heal.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dados Pessoais" />
+
+        <EditText
+            android:id="@+id/et_nome_completo"
+            style="@style/Heal.Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome Completo"
+            android:text="Tania" />
+
+        <EditText
+            android:id="@+id/et_data_nascimento"
+            style="@style/Heal.Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data de Nascimento"
+            android:text="23/09/2025" />
+
+        <EditText
+            android:id="@+id/et_telefone"
+            style="@style/Heal.Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Telefone"
+            android:inputType="phone"
+            android:text="11980528958" />
+
+        <EditText
+            android:id="@+id/et_email"
+            style="@style/Heal.Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:text="carollinepp@yahoo.com.br" />
+
+        <EditText
+            android:id="@+id/et_profissao"
+            style="@style/Heal.Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Profissão"
+            android:text="Do Lar" />
+
+        <EditText
+            android:id="@+id/et_estado_civil"
+            style="@style/Heal.Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Estado Civil"
+            android:text="SP" />
+
+        <!-- T - Tecido / Imagem da Ferida -->
+        <TextView android:id="@+id/tv_header_tecido" style="@style/Heal.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="T - Tecido" />
+
+        <TextView style="@style/Heal.Subheading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Imagem da Ferida" />
+
+        <ImageView
+            android:id="@+id/img_prev_ferida"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:contentDescription="Pré-visualização da ferida"
+            android:background="#DDDDDD" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_escolher_imagem"
+                style="@style/Heal.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Escolher imagem" />
+            <Button
+                android:id="@+id/btn_remover_imagem"
+                style="@style/Heal.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Remover Imagem" />
+        </LinearLayout>
+
+        <!-- Dimensões e Características Gerais -->
+        <TextView android:id="@+id/tv_header_dimensoes" style="@style/Heal.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dimensões e Características Gerais" />
+
+        <EditText android:id="@+id/et_largura" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Largura (cm)" android:inputType="numberDecimal" android:text="5" />
+        <EditText android:id="@+id/et_comprimento" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Comprimento (cm)" android:inputType="numberDecimal" android:text="5" />
+        <EditText android:id="@+id/et_profundidade" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Profundidade (cm)" android:inputType="numberDecimal" android:text="2,5" />
+        <EditText android:id="@+id/et_localizacao" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Localização" android:text="Região Sacral (Posterior) - sacral" />
+        <EditText android:id="@+id/et_tempo_evolucao" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Tempo de Evolução" android:inputType="number" android:text="22" />
+        <EditText android:id="@+id/et_etiologia" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Etiologia" android:text="Lesão por Pressão" />
+
+        <!-- Avaliação do Leito da Ferida -->
+        <TextView android:id="@+id/tv_header_leito" style="@style/Heal.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Avaliação do Leito da Ferida" />
+
+        <EditText android:id="@+id/et_granulacao_percent" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Granulação (%)" android:inputType="number" android:text="90" />
+        <EditText android:id="@+id/et_epitelizacao_percent" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Epitelização (%)" android:inputType="number" android:text="0" />
+        <EditText android:id="@+id/et_esfacelo_percent" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Esfacelo (%)" android:inputType="number" android:text="10" />
+        <EditText android:id="@+id/et_necrose_seca_percent" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Necrose Seca (%)" android:inputType="number" android:text="0" />
+
+        <!-- I - Infecção e Inflamação -->
+        <TextView android:id="@+id/tv_header_infeccao" style="@style/Heal.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I - Infecção e Inflamação" />
+        <EditText android:id="@+id/et_intensidade_dor" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Intensidade da Dor (0-10)" android:inputType="number" android:text="0" />
+        <EditText android:id="@+id/et_fatores_dor" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Fatores que Aliviam/Pioram a Dor" />
+
+        <TextView style="@style/Heal.Subheading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sinais de Inflamação" />
+        <CheckBox android:id="@+id/cb_rubor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rubor" />
+        <CheckBox android:id="@+id/cb_calor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Calor" />
+        <CheckBox android:id="@+id/cb_edema" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Edema" />
+        <CheckBox android:id="@+id/cb_dor_local" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dor Local" />
+        <CheckBox android:id="@+id/cb_perda_funcao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Perda de Função" />
+
+        <TextView style="@style/Heal.Subheading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sinais de Infecção Local" />
+        <CheckBox android:id="@+id/cb_eritema_perilesional" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Eritema Perilesional" />
+        <CheckBox android:id="@+id/cb_calor_local" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Calor Local" />
+        <CheckBox android:id="@+id/cb_edema_local" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Edema" />
+        <CheckBox android:id="@+id/cb_dor_local_inf" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dor Local" />
+        <CheckBox android:id="@+id/cb_exsudato_purulento" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Exsudato Purulento" />
+        <CheckBox android:id="@+id/cb_odor_fetido" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Odor Fétido" />
+        <CheckBox android:id="@+id/cb_retardo_cicatrizacao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retardo na Cicatrização" />
+        <CheckBox android:id="@+id/cb_cultura_realizada" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cultura da Ferida Realizada?" />
+
+        <!-- M - Umidade (Exsudato) -->
+        <TextView android:id="@+id/tv_header_umidade" style="@style/Heal.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="M - Umidade (Exsudato)" />
+        <EditText android:id="@+id/et_exsudato_quantidade" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Quantidade" android:text="Moderado" />
+        <EditText android:id="@+id/et_exsudato_tipo" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Tipo" android:text="Seropurulento" />
+        <EditText android:id="@+id/et_exsudato_consistencia" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Consistência" android:text="Fina" />
+
+        <!-- E - Bordas (Edge) -->
+        <TextView android:id="@+id/tv_header_bordas" style="@style/Heal.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="E - Bordas (Edge)" />
+        <EditText android:id="@+id/et_bordas_caracteristicas" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Características das Bordas" android:text="Irregulares" />
+        <EditText android:id="@+id/et_bordas_fixacao" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Fixação das Bordas" android:text="Descoladas" />
+        <EditText android:id="@+id/et_velocidade_cicatrizacao" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Velocidade de Cicatrização" android:text="Estagnada" />
+
+        <TextView style="@style/Heal.Subheading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Presença de Túneis ou Cavidade?" />
+        <EditText android:id="@+id/et_tunel_localizacao" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Localização" android:text="acima" />
+
+        <!-- Pele Perilesional -->
+        <TextView android:id="@+id/tv_header_pele" style="@style/Heal.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pele Perilesional" />
+        <EditText android:id="@+id/et_umidade_pele" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Umidade da Pele" android:text="Hidratada" />
+        <EditText android:id="@+id/et_extensao_alteracao" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Extensão da Alteração" />
+
+        <TextView style="@style/Heal.Subheading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Condição da Pele" />
+        <CheckBox android:id="@+id/cb_pele_integra" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Íntegra" />
+        <CheckBox android:id="@+id/cb_pele_eritematosa" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Eritematosa" />
+        <CheckBox android:id="@+id/cb_pele_macerada" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Macerada" />
+        <CheckBox android:id="@+id/cb_pele_seca" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Seca e Descamativa" />
+        <CheckBox android:id="@+id/cb_pele_eczema" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Eczematosa" />
+        <CheckBox android:id="@+id/cb_pele_hiperpigmentada" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hiperpigmentada" />
+        <CheckBox android:id="@+id/cb_pele_hipopigmentada" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hipopigmentada" />
+        <CheckBox android:id="@+id/cb_pele_indurada" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Indurada" />
+        <CheckBox android:id="@+id/cb_pele_sensivel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sensível" />
+        <CheckBox android:id="@+id/cb_pele_edema" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Edema" />
+
+        <!-- R - Reparo e Recomendações -->
+        <TextView android:id="@+id/tv_header_reparo" style="@style/Heal.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R - Reparo e Recomendações" />
+        <EditText android:id="@+id/et_observacoes" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Observações e Plano de Tratamento" />
+        <EditText android:id="@+id/et_data_consulta" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Data da Consulta" android:text="23/09/2025" />
+        <EditText android:id="@+id/et_hora_consulta" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Hora da Consulta" android:text="21:02" />
+        <EditText android:id="@+id/et_profissional" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Profissional Responsável" android:text="Carol" />
+        <EditText android:id="@+id/et_conselho" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="COREN/CRM" />
+        <EditText android:id="@+id/et_data_retorno" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Data de Retorno" android:text="23/10/2025" />
+
+        <!-- S - Fatores Sociais e Histórico do Paciente -->
+        <TextView android:id="@+id/tv_header_sociais" style="@style/Heal.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="S - Fatores Sociais e Histórico do Paciente" />
+        <EditText android:id="@+id/et_fatores_sociais" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Fatores Sociais e de Autocuidado" />
+        <EditText android:id="@+id/et_nivel_atividade" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Nível de Atividade (Ex: Acamado, Ativo)" />
+        <EditText android:id="@+id/et_compreensao_adesao" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Compreensão e Adesão (Ex: Boa, Regular, Baixa)" />
+        <EditText android:id="@+id/et_suporte_social" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Suporte Social e Cuidadores" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hábitos e Histórico Pessoal" />
+        <CheckBox android:id="@+id/cb_atividade_fisica" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pratica atividade física?" />
+        <CheckBox android:id="@+id/cb_ingere_alcool" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ingere álcool?" />
+        <CheckBox android:id="@+id/cb_fumante" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="É fumante?" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Estado Nutricional" />
+        <EditText android:id="@+id/et_avaliacao_nutricional" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Avaliação Nutricional (Alimentação, peso, etc.)" />
+        <EditText android:id="@+id/et_ingestao_agua" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Ingestão de Água por Dia" />
+
+        <TextView android:id="@+id/tv_header_historico" style="@style/Heal.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Histórico Clínico e Comorbidades" />
+        <EditText android:id="@+id/et_objetivo_tratamento" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Objetivo do Tratamento" />
+        <EditText android:id="@+id/et_historico_cicatrizacao" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Histórico de Cicatrização" />
+        <CheckBox android:id="@+id/cb_alergia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Possui alergia?" />
+        <CheckBox android:id="@+id/cb_cirurgias" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Realizou cirurgias?" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Função Vascular" />
+        <CheckBox android:id="@+id/cb_claudicacao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Claudicação Intermitente" />
+        <CheckBox android:id="@+id/cb_dor_repouso" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dor em Repouso" />
+        <EditText android:id="@+id/et_pulsos_perifericos" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Pulsos Periféricos" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Heal.Subheading" android:text="Comorbidades" />
+        <CheckBox android:id="@+id/cb_dmi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DMI" />
+        <CheckBox android:id="@+id/cb_dmii" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DMII" />
+        <CheckBox android:id="@+id/cb_has" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HAS" />
+        <CheckBox android:id="@+id/cb_neoplasia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Neoplasia" />
+        <CheckBox android:id="@+id/cb_hiv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HIV/AIDS" />
+        <CheckBox android:id="@+id/cb_obesidade" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Obesidade" />
+        <CheckBox android:id="@+id/cb_cardiopatia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cardiopatia" />
+        <CheckBox android:id="@+id/cb_dpoc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DPOC" />
+        <CheckBox android:id="@+id/cb_doenca_hematologica" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Doença Hematológica" />
+        <CheckBox android:id="@+id/cb_doenca_vascular" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Doença Vascular" />
+        <CheckBox android:id="@+id/cb_demencia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Demência Senil" />
+        <CheckBox android:id="@+id/cb_insuficiencia_renal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Insuficiência Renal" />
+        <CheckBox android:id="@+id/cb_hanseniase" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hanseníase" />
+        <CheckBox android:id="@+id/cb_insuficiencia_hepatica" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Insuficiência Hepática" />
+        <CheckBox android:id="@+id/cb_doenca_autoimune" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Doença Autoimune" />
+
+        <EditText android:id="@+id/et_outras_condicoes" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Outras Condições" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Medicamentos em Uso" />
+        <CheckBox android:id="@+id/cb_anti_hipertensivo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Anti-hipertensivo" />
+        <CheckBox android:id="@+id/cb_corticoides" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Corticoides" />
+        <CheckBox android:id="@+id/cb_hipoglicemiantes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hipoglicemiantes Orais" />
+        <CheckBox android:id="@+id/cb_aines" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AINES" />
+        <CheckBox android:id="@+id/cb_insulina" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Insulina" />
+        <CheckBox android:id="@+id/cb_drogas_vasoativas" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Drogas Vasoativas" />
+        <CheckBox android:id="@+id/cb_suplemento" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Suplemento" />
+        <CheckBox android:id="@+id/cb_anticoagulante" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Anticoagulante" />
+        <CheckBox android:id="@+id/cb_vitaminico" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vitamínico" />
+        <CheckBox android:id="@+id/cb_antirretroviral" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Antirretroviral" />
+        <EditText android:id="@+id/et_outros_medicamentos" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Outros Medicamentos" />
+
+        <Button
+            android:id="@+id/btn_salvar_anamnese"
+            style="@style/Heal.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base app theme mapping Tailwind tokens to Android styles -->
+    <style name="Theme.Healplusapp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:colorBackground">@color/heal_background</item>
+        <item name="android:textColor">@color/heal_foreground</item>
+        <item name="colorPrimary">@color/heal_primary</item>
+        <item name="colorOnPrimary">@color/heal_on_primary</item>
+        <item name="colorSecondary">@color/heal_secondary</item>
+        <item name="colorOnSecondary">@color/heal_on_secondary</item>
+    </style>
+
+    <!-- Cards / Containers -->
+    <style name="Heal.Card">
+        <item name="android:background">@color/heal_card</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <!-- Inputs -->
+    <style name="Heal.Input">
+        <item name="android:background">@drawable/bg_input</item>
+        <item name="android:textColor">@color/heal_foreground</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <!-- Buttons -->
+    <style name="Heal.Button">
+        <item name="android:background">@drawable/bg_button_primary</item>
+        <item name="android:textColor">@color/heal_on_primary</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <!-- Headings / TextAppearance -->
+    <style name="Heal.Heading">
+        <item name="android:textColor">@color/heal_foreground</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+    <style name="Heal.Subheading">
+        <item name="android:textColor">@color/heal_on_muted</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+    <style name="Heal.Section">
+        <item name="android:paddingTop">12dp</item>
+    </style>
+</resources>

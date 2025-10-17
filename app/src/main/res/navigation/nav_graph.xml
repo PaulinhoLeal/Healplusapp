@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.healplusapp.features.dashboard.DashboardFragment"
+        android:label="Dashboard" />
+
+    <fragment
+        android:id="@+id/novaAnamneseFragment"
+        android:name="com.example.healplusapp.features.anamnese.NovaAnamneseFragment"
+        android:label="Nova Anamnese" />
+
+    <fragment
+        android:id="@+id/minhasFichasFragment"
+        android:name="com.example.healplusapp.features.fichas.MinhasFichasFragment"
+        android:label="Minhas Fichas" />
+
+    <fragment
+        android:id="@+id/agendaFragment"
+        android:name="com.example.healplusapp.features.agenda.AgendaFragment"
+        android:label="Agenda" />
+
+    <fragment
+        android:id="@+id/gerarRelatorioFragment"
+        android:name="com.example.healplusapp.features.relatorios.GerarRelatorioFragment"
+        android:label="Gerar Relatório" />
+
+    <fragment
+        android:id="@+id/compararRelatoriosFragment"
+        android:name="com.example.healplusapp.features.relatorios.CompararRelatoriosFragment"
+        android:label="Comparar Relatórios" />
+
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.example.healplusapp.features.perfil.PerfilFragment"
+        android:label="Perfil" />
+
+</navigation>

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Healplusapp</string>
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_nova_anamnese">Nova Anamnese</string>
+    <string name="menu_minhas_fichas">Minhas Fichas</string>
+    <string name="menu_agenda">Agenda</string>
+    <string name="menu_gerar_relatorio">Gerar Relatório</string>
+    <string name="menu_comparar_relatorios">Comparar Relatórios</string>
+    <string name="menu_perfil">Perfil</string>
 </resources>

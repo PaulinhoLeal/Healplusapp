@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView style="@style/Heal.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Relatório 1 (Antigo)" />
+        <EditText android:id="@+id/et_report1" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Conteúdo em texto (Markdown)" />
+        <EditText android:id="@+id/et_report1_date" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Data do relatório 1 (dd/MM/yyyy)" />
+        <ImageView android:id="@+id/img1" android:layout_width="match_parent" android:layout_height="180dp" android:background="#DDDDDD" />
+        <Button android:id="@+id/btn_pick_img1" style="@style/Heal.Button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Selecionar Imagem 1" />
+
+        <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+        <TextView style="@style/Heal.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Relatório 2 (Recente)" />
+        <EditText android:id="@+id/et_report2" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Conteúdo em texto (Markdown)" />
+        <EditText android:id="@+id/et_report2_date" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Data do relatório 2 (dd/MM/yyyy)" />
+        <ImageView android:id="@+id/img2" android:layout_width="match_parent" android:layout_height="180dp" android:background="#DDDDDD" />
+        <Button android:id="@+id/btn_pick_img2" style="@style/Heal.Button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Selecionar Imagem 2" />
+
+        <View android:layout_width="match_parent" android:layout_height="16dp" />
+
+        <Button android:id="@+id/btn_compare" style="@style/Heal.Button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Comparar" />
+
+        <TextView android:id="@+id/tv_result" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="12dp" android:text="Resultado aparecerá aqui." />
+
+    </LinearLayout>
+</ScrollView>

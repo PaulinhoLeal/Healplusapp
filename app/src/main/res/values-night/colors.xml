@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark scheme approximating provided Tailwind tokens -->
+    <color name="heal_background">#0B0F1A</color>
+    <color name="heal_foreground">#F8FAFF</color>
+
+    <color name="heal_card">#0B0F1A</color>
+    <color name="heal_card_foreground">#F8FAFF</color>
+
+    <color name="heal_primary">#3B82F6</color>
+    <color name="heal_on_primary">#F8FAFF</color>
+
+    <color name="heal_secondary">#1F2633</color>
+    <color name="heal_on_secondary">#F8FAFF</color>
+
+    <color name="heal_muted">#1F2633</color>
+    <color name="heal_on_muted">#8A99B2</color>
+
+    <color name="heal_accent">#1F2633</color>
+    <color name="heal_on_accent">#F8FAFF</color>
+
+    <color name="heal_destructive">#9F1239</color>
+    <color name="heal_on_destructive">#F8FAFF</color>
+
+    <color name="heal_border">#1F2633</color>
+    <color name="heal_input">#1F2633</color>
+    <color name="heal_ring">#3B82F6</color>
+</resources>
