@@ -14,6 +14,8 @@ import android.widget.TextView
 import android.widget.Spinner
 import android.widget.ArrayAdapter
 import android.widget.Button
+import java.util.Locale
+import kotlin.text.format
 
 class PerfilFragment : Fragment() {
     override fun onCreateView(
@@ -44,7 +46,7 @@ class PerfilFragment : Fragment() {
         seekFont.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 val scale = progress / 10f
-                textFont.text = "Tamanho da fonte: ${'$'}{String.format(Locale.getDefault(), "%.1f", scale)}x"
+                textFont.text = "Tamanho da fonte: ${String.format(Locale.getDefault(), "%%.1fx", scale)}"
             }
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}

@@ -43,23 +43,25 @@ class UserSettings(private val context: Context) {
     private fun applyFontScale(activity: android.app.Activity, scale: Float) {
         val config = Configuration(activity.resources.configuration)
         config.fontScale = scale.coerceIn(0.8f, 1.6f)
-        val metrics = activity.resources.displayMetrics
-        activity.resources.updateConfiguration(config, metrics)
+        activity.applyOverrideConfiguration(config)
     }
 
     private fun applyLanguage(activity: android.app.Activity, langTag: String) {
         val locale = Locale.forLanguageTag(langTag)
         Locale.setDefault(locale)
         val config = Configuration(activity.resources.configuration)
+
+        // Define o local da nova configuração de forma compatível com diferentes versões do Android
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             config.setLocales(android.os.LocaleList(locale))
         } else {
+            // Suprime o aviso de deprecation para setLocale, que é necessário para APIs mais antigas
             @Suppress("DEPRECATION")
             config.setLocale(locale)
         }
-        activity.apply {
-            resources.updateConfiguration(config, resources.displayMetrics)
-        }
+
+        // CORREÇÃO: Usa o método moderno para aplicar a configuração na atividade
+        activity.applyOverrideConfiguration(config)
     }
 
     companion object {

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base app theme mapping Tailwind tokens to Android styles -->
-    <style name="Theme.Healplusapp" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Heal" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:colorBackground">@color/heal_background</item>
         <item name="android:textColor">@color/heal_foreground</item>
-        <item name="colorPrimary">@color/heal_primary</item>
         <item name="colorOnPrimary">@color/heal_on_primary</item>
         <item name="colorSecondary">@color/heal_secondary</item>
         <item name="colorOnSecondary">@color/heal_on_secondary</item>

@@ -3,7 +3,6 @@ package com.example.healplusapp.features.anamnese
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.healplusapp.R
 import android.content.Intent
@@ -139,7 +138,7 @@ class NovaAnamneseFragment : Fragment() {
                 override fun afterTextChanged(s: Editable?) {
                     // Permite dígitos, vírgula e ponto; evita múltiplos separadores
                     val txt = s?.toString() ?: return
-                    val cleaned = txt.replace("[^0-9,\.]".toRegex(), "")
+                    val cleaned = txt.replace("[^0-9,]".toRegex(), "")
                     if (cleaned != txt) {
                         editText.setText(cleaned)
                         editText.setSelection(cleaned.length)

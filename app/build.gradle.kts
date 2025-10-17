@@ -48,14 +48,25 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.preference)
-    implementation(libs.firebase.auth)
     implementation(libs.androidx.credentials)
     implementation(libs.androidx.credentials.play.services.auth)
     implementation(libs.googleid)
-    implementation(libs.firebase.database)
-    implementation(libs.firebase.firestore)
+    implementation(libs.androidx.ui.text.android)
+    // Use the alias from the version catalog
+    implementation(platform(libs.androidx.compose.bom))
+    // Other Compose dependencies can now omit their versions
+    implementation(libs.ui)
+    implementation(libs.material3)
+    implementation(libs.ui.tooling.preview)
+    debugImplementation(libs.ui.tooling)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     
+}
+
+configurations.all {
+    resolutionStrategy {
+        force("androidx.compose.ui:ui-text:1.9.3")
+    }
 }

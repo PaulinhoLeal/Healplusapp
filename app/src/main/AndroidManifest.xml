@@ -10,22 +10,28 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Healplusapp">
+        android:theme="@style/Theme.Healplusapp"
+        android:enableOnBackInvokedCallback="true"
+        tools:ignore="MissingApplicationIcon"> <!-- Adicionado para acessibilidade -->
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Healplusapp">
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <!-- A linha 'android:theme' foi removida por ser redundante -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <activity
             android:name=".features.anamnese.AnamnesePreviewActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
     </application>
 
 </manifest>
