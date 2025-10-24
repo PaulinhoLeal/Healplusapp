@@ -2,17 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/dashboardFragment"
+        android:icon="@drawable/ic_dashboard"
         android:title="@string/menu_dashboard" />
     <item
         android:id="@+id/novaAnamneseFragment"
+        android:icon="@drawable/ic_add_circle"
         android:title="@string/menu_nova_anamnese" />
     <item
         android:id="@+id/minhasFichasFragment"
+        android:icon="@drawable/ic_folder"
         android:title="@string/menu_minhas_fichas" />
     <item
         android:id="@+id/agendaFragment"
+        android:icon="@drawable/ic_calendar"
         android:title="@string/menu_agenda" />
     <item
         android:id="@+id/perfilFragment"
+        android:icon="@drawable/ic_person"
         android:title="@string/menu_perfil" />
 </menu>

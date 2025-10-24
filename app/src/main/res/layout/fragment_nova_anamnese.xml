@@ -113,7 +113,6 @@
             android:layout_height="24dp"
             android:background="@drawable/bg_bar_container"
             android:orientation="horizontal"
-            android:weightSum="100"
             android:padding="2dp"
             android:layout_marginBottom="8dp">
 
@@ -121,29 +120,33 @@
                 android:id="@+id/leito_bar_granulacao"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:background="#E74C3C" />
+                android:layout_weight="0"
+                android:background="#FF6B35"
+                android:minWidth="0dp" />
 
             <View
                 android:id="@+id/leito_bar_epitelizacao"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:background="#F5B7B1" />
+                android:layout_weight="0"
+                android:background="#FFB3BA"
+                android:minWidth="0dp" />
 
             <View
                 android:id="@+id/leito_bar_esfacelo"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:background="#F1C40F" />
+                android:layout_weight="0"
+                android:background="#FFD700"
+                android:minWidth="0dp" />
 
             <View
                 android:id="@+id/leito_bar_necrose"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:background="#2C3E50" />
+                android:layout_weight="0"
+                android:background="#404040"
+                android:minWidth="0dp" />
         </LinearLayout>
 
         <!-- Legenda -->
@@ -165,7 +168,24 @@
 
         <!-- I - Infecção e Inflamação -->
         <TextView android:id="@+id/tv_header_infeccao" style="@style/Heal.Heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I - Infecção e Inflamação" />
-        <EditText android:id="@+id/et_intensidade_dor" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Intensidade da Dor (0-10)" android:inputType="number" android:text="0" />
+        
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Intensidade da Dor (0-10)" android:textSize="16sp" android:layout_marginBottom="8dp" />
+        
+        <SeekBar
+            android:id="@+id/seek_intensidade_dor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:progress="0"
+            android:layout_marginBottom="8dp" />
+        
+        <TextView
+            android:id="@+id/tv_intensidade_dor_valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 - Sem dor"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp" />
         <EditText android:id="@+id/et_fatores_dor" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Fatores que Aliviam/Pioram a Dor" />
 
         <TextView style="@style/Heal.Subheading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sinais de Inflamação" />
@@ -285,12 +305,28 @@
         <CheckBox android:id="@+id/cb_antirretroviral" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Antirretroviral" />
         <EditText android:id="@+id/et_outros_medicamentos" style="@style/Heal.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Outros Medicamentos" />
 
-        <Button
-            android:id="@+id/btn_salvar_anamnese"
-            style="@style/Heal.Button"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Salvar" />
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+            <Button
+                android:id="@+id/btn_limpar_formulario"
+                style="@style/Heal.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Limpar" />
+            <Button
+                android:id="@+id/btn_salvar_anamnese"
+                style="@style/Heal.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Salvar" />
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

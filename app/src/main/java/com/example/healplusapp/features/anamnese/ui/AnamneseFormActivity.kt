@@ -234,7 +234,8 @@ class AnamneseFormActivity : AppCompatActivity() {
         putText(R.id.et_esfacelo_percent, "esfaceloPercent", data)
         putText(R.id.et_necrose_seca_percent, "necroseSecaPercent", data)
         // Infecção/Inflamação
-        putText(R.id.et_intensidade_dor, "intensidadeDor", data)
+        val seekDor = findViewById<android.widget.SeekBar>(R.id.seek_intensidade_dor)
+        data.put("intensidadeDor", seekDor?.progress ?: 0)
         putText(R.id.et_fatores_dor, "fatoresDor", data)
         putCheck(R.id.cb_rubor, "rubor", data)
         putCheck(R.id.cb_calor, "calor", data)
