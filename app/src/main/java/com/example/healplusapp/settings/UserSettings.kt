@@ -1,5 +1,6 @@
 package com.example.healplusapp.settings
 
+import android.app.Activity
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Build
@@ -8,6 +9,7 @@ import androidx.preference.PreferenceManager
 import java.util.Locale
 
 class UserSettings(private val context: Context) {
+
     private val prefs = PreferenceManager.getDefaultSharedPreferences(context)
 
     fun setDarkModeEnabled(enabled: Boolean) {
@@ -27,41 +29,42 @@ class UserSettings(private val context: Context) {
         prefs.edit().putString(KEY_LANGUAGE, langTag).apply()
     }
 
-    fun applyToActivity(activity: android.app.Activity) {
-        applyDarkMode(prefs.getBoolean(KEY_DARK_MODE, false))
-        applyFontScale(activity, prefs.getFloat(KEY_FONT_SCALE, 1.0f))
-        applyLanguage(activity, prefs.getString(KEY_LANGUAGE, Locale.getDefault().toLanguageTag()) ?: "pt-BR")
-        // Alto contraste será aplicado via tema custom em telas específicas no futuro
-    }
-
+    /** 🔹 Aplica tema escuro imediatamente **/
     private fun applyDarkMode(enabled: Boolean) {
         AppCompatDelegate.setDefaultNightMode(
             if (enabled) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
         )
     }
 
-    private fun applyFontScale(activity: android.app.Activity, scale: Float) {
-        val config = Configuration(activity.resources.configuration)
-        config.fontScale = scale.coerceIn(0.8f, 1.6f)
-        activity.applyOverrideConfiguration(config)
-    }
+    /** 🔹 Cria um novo contexto configurado com idioma e escala **/
+    fun applyToContext(base: Context): Context {
+        val config = Configuration(base.resources.configuration)
 
-    private fun applyLanguage(activity: android.app.Activity, langTag: String) {
+        // Aplica escala de fonte
+        val scale = prefs.getFloat(KEY_FONT_SCALE, 1.0f)
+        config.fontScale = scale.coerceIn(0.8f, 1.6f)
+
+        // Aplica idioma
+        val langTag = prefs.getString(KEY_LANGUAGE, Locale.getDefault().toLanguageTag()) ?: "pt-BR"
         val locale = Locale.forLanguageTag(langTag)
         Locale.setDefault(locale)
-        val config = Configuration(activity.resources.configuration)
-
-        // Define o local da nova configuração de forma compatível com diferentes versões do Android
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             config.setLocales(android.os.LocaleList(locale))
         } else {
-            // Suprime o aviso de deprecation para setLocale, que é necessário para APIs mais antigas
             @Suppress("DEPRECATION")
             config.setLocale(locale)
         }
 
-        // CORREÇÃO: Usa o método moderno para aplicar a configuração na atividade
-        activity.applyOverrideConfiguration(config)
+        // Retorna um novo contexto configurado
+        return base.createConfigurationContext(config)
+    }
+
+    /** 🔹 Chamada segura para recriar a Activity após salvar preferências **/
+    fun applyToActivity(activity: Activity) {
+        // Reaplica o tema noturno (pode ser feito em tempo real)
+        applyDarkMode(prefs.getBoolean(KEY_DARK_MODE, false))
+        // Recria a Activity para aplicar idioma e escala de fonte
+        activity.recreate()
     }
 
     companion object {
@@ -71,4 +74,3 @@ class UserSettings(private val context: Context) {
         private const val KEY_LANGUAGE = "pref_language"
     }
 }
-

@@ -16,12 +16,14 @@
             android:id="@+id/switch_dark_mode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:text="Modo escuro" />
 
         <Switch
             android:id="@+id/switch_high_contrast"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:text="Alto contraste" />
 
         <SeekBar
@@ -40,7 +42,8 @@
         <Spinner
             android:id="@+id/spinner_language"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
 
         <Button
             android:id="@+id/button_save_prefs"
