@@ -15,7 +15,7 @@ import android.widget.Button
 import android.widget.Toast
 import com.example.healplusapp.features.anamnese.controller.AnamneseController
 import com.example.healplusapp.features.anamnese.model.Anamnese
-import com.example.healplusapp.features.anamnese.ui.AnamnesePreviewActivity
+import com.example.healplusapp.features.anamnese.AnamnesePreviewActivity
 import org.json.JSONObject
 import java.text.SimpleDateFormat
 import java.util.Date

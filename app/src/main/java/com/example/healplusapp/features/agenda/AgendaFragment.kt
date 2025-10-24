@@ -16,7 +16,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import com.example.healplusapp.features.anamnese.controller.AnamneseController
 import com.example.healplusapp.features.anamnese.model.Anamnese
-import com.example.healplusapp.features.anamnese.ui.AnamnesePreviewActivity
+import com.example.healplusapp.features.anamnese.AnamnesePreviewActivity
 import com.example.healplusapp.features.agenda.model.Agendamento
 import com.example.healplusapp.features.agenda.model.StatusAgendamento
 import org.json.JSONObject
