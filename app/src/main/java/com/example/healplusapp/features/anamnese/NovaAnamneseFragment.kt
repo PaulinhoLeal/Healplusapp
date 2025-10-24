@@ -714,43 +714,39 @@ class NovaAnamneseFragment : Fragment() {
     private fun atualizarCoresBarra(barra: View, percentual: Int) {
         when (barra.id) {
             R.id.leito_bar_granulacao -> {
-                // Granulação: vermelho-alaranjado (como na imagem)
+                // Granulação: VERMELHO puro (como na imagem)
                 if (percentual == 0) {
                     barra.setBackgroundColor(android.graphics.Color.TRANSPARENT)
                 } else {
-                    val intensidade = (percentual * 2.55).toInt().coerceIn(50, 255)
-                    // Vermelho-alaranjado: mais vermelho, menos verde, sem azul
-                    barra.setBackgroundColor(android.graphics.Color.rgb(intensidade, (intensidade * 0.6).toInt(), 0))
+                    // Vermelho puro: RGB(255, 0, 0)
+                    barra.setBackgroundColor(android.graphics.Color.RED)
                 }
             }
             R.id.leito_bar_epitelizacao -> {
-                // Epitelização: rosa claro/pêssego (como na imagem)
+                // Epitelização: ROSA (como na imagem)
                 if (percentual == 0) {
                     barra.setBackgroundColor(android.graphics.Color.TRANSPARENT)
                 } else {
-                    val intensidade = (percentual * 2.55).toInt().coerceIn(50, 255)
-                    // Rosa claro/pêssego: vermelho alto, verde médio, azul baixo
-                    barra.setBackgroundColor(android.graphics.Color.rgb(intensidade, (intensidade * 0.8).toInt(), (intensidade * 0.6).toInt()))
+                    // Rosa: RGB(255, 192, 203)
+                    barra.setBackgroundColor(android.graphics.Color.rgb(255, 192, 203))
                 }
             }
             R.id.leito_bar_esfacelo -> {
-                // Esfacelo: amarelo brilhante (como na imagem)
+                // Esfacelo: AMARELO (como na imagem)
                 if (percentual == 0) {
                     barra.setBackgroundColor(android.graphics.Color.TRANSPARENT)
                 } else {
-                    val intensidade = (percentual * 2.55).toInt().coerceIn(50, 255)
-                    // Amarelo brilhante: vermelho e verde altos, sem azul
-                    barra.setBackgroundColor(android.graphics.Color.rgb(intensidade, intensidade, 0))
+                    // Amarelo: RGB(255, 255, 0)
+                    barra.setBackgroundColor(android.graphics.Color.YELLOW)
                 }
             }
             R.id.leito_bar_necrose -> {
-                // Necrose: cinza escuro/preto (como na imagem)
+                // Necrose: CINZA ESCURO (como na imagem)
                 if (percentual == 0) {
                     barra.setBackgroundColor(android.graphics.Color.TRANSPARENT)
                 } else {
-                    val intensidade = (255 - percentual * 2.2).toInt().coerceIn(30, 255)
-                    // Cinza escuro: todos os valores iguais e baixos
-                    barra.setBackgroundColor(android.graphics.Color.rgb(intensidade, intensidade, intensidade))
+                    // Cinza escuro: RGB(64, 64, 64)
+                    barra.setBackgroundColor(android.graphics.Color.rgb(64, 64, 64))
                 }
             }
         }

@@ -121,7 +121,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0"
-                android:background="#FF6B35"
+                android:background="#FF0000"
                 android:minWidth="0dp" />
 
             <View
@@ -129,7 +129,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0"
-                android:background="#FFB3BA"
+                android:background="#FFC0CB"
                 android:minWidth="0dp" />
 
             <View
@@ -137,7 +137,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0"
-                android:background="#FFD700"
+                android:background="#FFFF00"
                 android:minWidth="0dp" />
 
             <View
