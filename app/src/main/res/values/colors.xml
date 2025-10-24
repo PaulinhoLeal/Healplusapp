@@ -25,4 +25,11 @@
     <color name="heal_border">#E5EAF3</color> <!-- hsl(214 32% 91.4%) -->
     <color name="heal_input">#E5EAF3</color>
     <color name="heal_ring">#3B82F6</color>
+    <!-- Add your app's specific colors here -->
+    <color name="my_app_blue">#0000FF</color>
+    <color name="my_app_green">#0C5D12</color>
+
+    <!-- It's also good practice to define standard theme colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
 </resources>

@@ -2,9 +2,97 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="?android:attr/colorBackground">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="?android:attr/colorPrimary"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📋 Minhas Fichas"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_contador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 fichas"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_status_agendado"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+    <!-- Filtros -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="?android:attr/colorBackground">
+
+        <Button
+            android:id="@+id/btn_filtrar_todos"
+            style="@style/Heal.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Todos"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="@android:color/holo_blue_bright" />
+
+        <Button
+            android:id="@+id/btn_filtrar_agendados"
+            style="@style/Heal.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Agendados"
+            android:layout_marginHorizontal="4dp"
+            android:backgroundTint="@android:color/holo_green_dark" />
+
+        <Button
+            android:id="@+id/btn_filtrar_realizados"
+            style="@style/Heal.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Realizados"
+            android:layout_marginStart="4dp"
+            android:backgroundTint="@android:color/holo_orange_dark" />
+
+    </LinearLayout>
+
+    <!-- Lista de fichas -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_fichas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp" />
+
+    <!-- Mensagem quando vazio -->
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📝 Nenhuma ficha encontrada\n\nClique em 'Nova Anamnese' para criar sua primeira ficha de paciente."
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="?android:attr/textColorSecondary"
+        android:padding="32dp"
+        android:visibility="gone" />
+
 </LinearLayout>
