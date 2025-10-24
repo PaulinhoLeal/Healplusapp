@@ -11,6 +11,8 @@ import java.util.Locale
 class UserSettings(private val context: Context) {
 
     private val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+    
+    fun getSharedPreferences() = prefs
 
     fun setDarkModeEnabled(enabled: Boolean) {
         prefs.edit().putBoolean(KEY_DARK_MODE, enabled).apply()
